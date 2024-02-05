@@ -1,0 +1,30 @@
+/* 只是利用css来创建的下雨特效 */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* .content{ */
+    /* 这段可以注释起来，这只是壁纸 */
+    /* width: 100vw;
+    height: 100vh;
+    background: url(https://s2.loli.net/2023/03/18/fldr7LGsXWhBITR.jpg) center center no-repeat;
+    background-size: cover;
+    background-color: yellowgreen;
+} */
+#rainBox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* 不阻碍其他元素事件触发 */
+    pointer-events: none;
+}
+.rain{
+    position: absolute;
+    /* 改变大小 */
+    width: 1px;
+    height: 100px;
+    
+    background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255,255,255,.6));
+}

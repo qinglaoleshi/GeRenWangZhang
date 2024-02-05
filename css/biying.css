@@ -1,0 +1,27 @@
+function getPicture(e) {
+ 
+    var formData = new FormData();
+ 
+      formData.append("smfile", e.target.files[0]);
+ 
+      axios({
+ 
+        // 请求类型
+ 
+        method: "POST",
+ 
+         url: "/upload",//sm.ms图床
+ 
+         headers:{'Content-Type':'multipart/form-data','Authorization':'你的API Acceaa'},
+ 
+          data:formData
+ 
+      }).then((response) => {
+ 
+        // 在控制台输出响应体中图片在服务器中的url地址
+ 
+        console.log(response.data)//response.data就有返回的图片地址
+ 
+      });
+ 
+    } //存储图片
