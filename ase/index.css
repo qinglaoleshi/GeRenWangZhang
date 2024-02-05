@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: url() center;
+    background-size: cover;
+    backdrop-filter: blur(2px) grayscale(1%);
+}
+
+.music-box {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-canvas {
+    position: absolute;
+    top: 0;
+}
+
+.my-music-btn {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: url(https://s2.loli.net/2023/04/10/E3pnOSqDWRYPrai.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    animation: music-btn-anim 20s infinite linear;
+}
+
+.my-music-btn.rotate {
+    animation-play-state: paused;
+}
+
+@keyframes music-btn-anim {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
